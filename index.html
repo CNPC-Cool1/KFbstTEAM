@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凯方蓝根号战队 (KFBST)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2d3748;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .main-content { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #4a5568;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .notice {
+            background: #fff9e6;
+            border-left: 5px solid #f6ad55;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a {
+            color: #5a67d8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        .links { display: flex; gap: 15px; margin-top: 20px; }
+        .btn {
+            background: #5a67d8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #4c51bf;
+            transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🧮</div>
+            <h1>凯方蓝根号战队</h1>
+            <p class="subtitle">Kai Fang Blue Sqrt Team (KFBST)</p>
+            <p>备战 CSP-J/NOIP | 算法竞赛训练小队 | 代码改变世界</p>
+            <div class="links">
+                <a href="https://www.luogu.com.cn/" class="btn" target="_blank">洛谷主页</a>
+                <a href="https://github.com/CNPC-Cool1/KFbstTEAM" class="btn" target="_blank">GitHub 仓库</a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>📢 最新公告</h2>
+                <div class="notice">
+                    <strong>🚀 网站上线！</strong>
+                    <p>这是我们战队的官方网站，将用于发布比赛安排、训练计划、题解分享。</p>
+                    <p><em>更多功能开发中，欢迎反馈建议。</em></p>
+                </div>
+                <p>🔹 近期目标：备战入门赛 #44，全员冲绿勾</p>
+                <p>🔹 长期目标：CSP-J 2026 取得佳绩</p>
+            </div>
+
+            <div class="card">
+                <h2>🎯 团队目标</h2>
+                <ul>
+                    <li>每周至少完成 5 道普及组以上题目</li>
+                    <li>每月组织一场内部模拟赛</li>
+                    <li>建立战队题解共享库</li>
+                    <li>开发战队工具（如在线评测插件）</li>
+                </ul>
+                <h2 style="margin-top: 30px;">🔗 重要链接</h2>
+                <ul>
+                    <li><a href="https://www.luogu.com.cn/team/你的团队ID" target="_blank">洛谷战队页</a>（请替换为真实ID）</li>
+                    <li><a href="https://www.luogu.com.cn/problem/list?difficulty=0&tag=0" target="_blank">洛谷题库</a></li>
+                    <li><a href="https://codeforces.com/" target="_blank">Codeforces</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #e2e8f0;">
+            <p>© 2026 凯方蓝根号战队 | 本页面由 GitHub Pages 驱动 | 最后更新：<span id="current-date"></span></p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Made with ❤️ by KFBST members</p>
+        </footer>
+    </div>
+
+    <script>
+        // 自动更新日期
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = now.toLocaleDateString('zh-CN', options);
+    </script>
+</body>
+</html>
